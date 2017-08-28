@@ -1,0 +1,55 @@
+{
+  "idRule": null,
+  "name": "Regla de prueba",
+  "condition": {
+    "type": "and",
+    "inputs": [
+      {
+        "type": "compare",
+        "a": [
+          [
+            {
+              "type": "add",
+              "inputs": [
+                [
+                  {
+                    "type": "fact",
+                    "field": "a"
+                  },
+                  {
+                    "type": "fact",
+                    "field": "b"
+                  }
+                ]
+              ]
+            }
+          ]
+        ],
+        "condition": "<",
+        "b": [
+          [
+            {
+              "type": "div",
+              "a": [
+                [
+                  {
+                    "type": "fact",
+                    "field": "c"
+                  }
+                ]
+              ],
+              "b": [
+                [
+                  {
+                    "type": "fact",
+                    "field": "d"
+                  }
+                ]
+              ]
+            }
+          ]
+        ]
+      }
+    ]
+  }
+}

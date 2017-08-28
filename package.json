@@ -1,0 +1,31 @@
+{
+  "name": "inferenciadordsl",
+  "version": "1.0.0",
+  "description": "Prueba Tecnica - Inferenciador DSL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felipeardila1010"
+  },
+  "author": "Andres Felipe Ardila",
+  "license": "ISC",
+  "dependencies": {
+    "ace-builds": "^1.2.8",
+    "angular": "^1.6.6",
+    "angular-animate": "^1.6.6",
+    "angular-aria": "^1.6.6",
+    "angular-material": "^1.1.4",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "is-empty": "^1.2.0",
+    "is-json": "^2.0.1",
+    "jade": "^1.11.0",
+    "jsoneditor": "^5.9.5",
+    "jsonschema": "^1.2.0",
+    "mongojs": "^2.4.1",
+    "ng-jsoneditor": "^1.0.0"
+  }
+}

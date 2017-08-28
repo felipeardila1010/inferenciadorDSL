@@ -1,0 +1,17 @@
+extends ./layout.jade
+block head_libraries
+	link(rel="stylesheet" href="/jsoneditor/dist/jsoneditor.min.css")
+	link(rel="stylesheet" href="/assets/inferenciador.css")
+block head
+	md-truncate(style="text-align: left;" flex) Probar Hecho
+block content
+	md-content(ng-controller="TestInferenciadorController")
+		div(layout="row" layout-sm="column" layout-xs="column" layout-align="center center")
+			div(flex="40")
+				div(id="jsoneditor" name="jsoneditor" ng-model="jsoninserted.data" options="jsoninserted.options" ng-jsoneditor)
+			div(flex="30")
+				div(id="jsonresult" name="jsonresult" ng-model="jsonresult.data" options="jsonresult.options" ng-jsoneditor)
+		div(layout="row" layout-align="center center")
+			md-button(md-colors="{background: 'red'}" href="/") Cancelar
+			md-button(md-colors="{background: 'blue'}" ng-click="testJSON()") Enviar
+	

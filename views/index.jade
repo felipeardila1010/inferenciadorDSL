@@ -1,0 +1,29 @@
+extends ./layout.jade
+block head_libraries
+	link(rel="stylesheet" href="/assets/index.css")
+block content
+	div(ng-controller="TestInferenciadorController"  class="container")
+		md-content(layout="row" layout-align="center center")
+			md-button(md-colors="{background: 'blue'}" ng-href="/inferenciador") Inferenciador
+			md-button(class="md-raised" md-colors="{background: 'green'}" ng-href="/addRuleView") Crear Regla Nueva	
+		md-content(layout="column" layout-align="center center")
+			br
+			table(ng-table="vm.tableParams" class="table" show-filter="true")
+				thead
+					tr
+						th Identificador
+						th Nombre
+						th Condición
+						th Operaciones
+				tbody
+					tr(ng-repeat="inferenciador in inferenciadortest")
+						td
+							| {{ inferenciador._id }}
+						td
+							| {{inferenciador.name}}
+						td
+							| {{inferenciador.condition}}
+						td
+							a(ng-href="/addRuleView/{{inferenciador._id}}") Editar
+							| &nbsp;&nbsp;
+							a(ng-click="removeRule(inferenciador._id)" href="") Eliminar

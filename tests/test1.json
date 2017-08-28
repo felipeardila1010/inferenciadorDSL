@@ -1,0 +1,52 @@
+{
+  "idRule": null,
+  "name": "Regla de prueba",
+  "condition": {
+    "type": "and",
+    "inputs": [
+      [
+        {
+          "type": "compare",
+          "a": [
+            [
+              {
+                "type": "fact",
+                "field": "Monto"
+              }
+            ]
+          ],
+          "condition": ">",
+          "b": [
+            [
+              {
+                "type": "constant",
+                "type_value": "int",
+                "value": "1400"
+              }
+            ]
+          ]
+        },
+        {
+          "type": "compare",
+          "a": [
+            [
+              {
+                "type": "fact",
+                "field": "Comercio"
+              }
+            ]
+          ],
+          "condition": "==",
+          "b": [
+            [
+              {
+                "type": "fact",
+                "field": "Mac"
+              }
+            ]
+          ]
+        }
+      ]
+    ]
+  }
+}

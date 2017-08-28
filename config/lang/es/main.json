@@ -1,0 +1,10 @@
+{
+	"errors"	: {
+		"invalid_structure" : "Error en la estructura del JSON",
+		"data_condition_invalid" : "En la construcción de la condición ocurrió un error por favor corrija los datos requeridos",
+		"variable_structure" : {
+			"message" : "Error en la variable :variable: = :message:",
+			"stack" : ":stack:"
+		}
+	}
+}

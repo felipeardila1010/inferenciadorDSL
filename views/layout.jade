@@ -1,0 +1,26 @@
+doctype html
+html(lang="es")
+	head
+		title Inferenciador DSL
+		meta(charset="utf-8")
+		link(rel="stylesheet", href="/angular-material/angular-material.min.css")
+		block head_libraries
+		md-toolbar
+			div(class="md-toolbar-tools" md-colors="{background: 'blue'}")
+				md-truncate(style="text-align: center;" flex) Inferenciador de Reglas
+		br
+		block head
+	body(ng-app="TestInferenciador")
+		block content
+		script(type="text/javascript", src="/angular/angular.min.js")
+		script(type="text/javascript", src="/angular-animate/angular-animate.js")
+		script(type="text/javascript", src="/angular-aria/angular-aria.min.js")
+		script(type="text/javascript", src="/angular-material/angular-material.min.js")
+		script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js")
+		script(type="text/javascript" src="/jsoneditor/dist/jsoneditor.min.js")
+		script(type="text/javascript" src="/ng-jsoneditor/ng-jsoneditor.min.js")
+		script(type="text/javascript", src="/mainController.js")
+		block js_libraries
+		block js
+		
+

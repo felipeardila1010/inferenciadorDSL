@@ -1,0 +1,185 @@
+{
+  "type": "object",
+  "properties": {
+    "idRule": {
+      "type": "null",
+      "default": null
+    },
+    "name": {
+      "type": "string"
+    },
+    "condition": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "and",
+            "or"
+          ]
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "compare"
+                  ]
+                },
+                "a": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "fact",
+                            "add",
+                            "mul",
+                            "sub",
+                            "div",
+                            "constant"
+                          ]
+                        },
+                        "field": {
+                          "type": "string"
+                        },
+                        "inputs" : {
+                          "type": "array",
+                          "items": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "fact"
+                                  ]
+                                },
+                                "field": {
+                                  "type": "string"
+                                },
+                                "value": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "type_value": {
+                          "type": "string",
+                          "enum": [
+                            "int",
+                            "double",
+                            "string"
+                          ]
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "condition": {
+                  "type": "string",
+                  "enum": [
+                    "<",
+                    "<=",
+                    "==",
+                    "!=",
+                    ">=",
+                    ">"
+                  ]
+                },
+                "b": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "enum": [
+                            "fact",
+                            "add",
+                            "mul",
+                            "sub",
+                            "div",
+                            "constant"
+                          ]
+                        },
+                        "field": {
+                          "type": "string"
+                        },
+                        "inputs" : {
+                          "type": "array",
+                          "items": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "type": {
+                                  "type": "string",
+                                  "enum": [
+                                    "fact"
+                                  ]
+                                },
+                                "field": {
+                                  "type": "string"
+                                },
+                                "value": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "type_value": {
+                          "type": "string",
+                          "enum": [
+                            "int",
+                            "double",
+                            "string"
+                          ]
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "required": [
+                "type",
+                "a",
+                "b",
+                "condition"
+              ]
+            }
+          }
+        }
+      },
+      "required": [
+        "type",
+        "inputs"
+      ]
+    }
+  },
+  "required": [
+    "idRule",
+    "name",
+    "condition"
+  ]
+}
