@@ -10,6 +10,26 @@ npm update
 node server
 ```
 
+### Sí genera problemas en la carga del proyecto
+
+```
+npm install express --save
+npm install mongo --save
+npm install mongojs --save
+npm install body-parser --save
+npm install is-json --save
+npm install is-empty --save
+npm install jsonschema --save
+npm install jade --save
+npm install angular --save
+npm install angular-material --save
+npm install angular-animate --save
+npm install angular-aria --save
+npm install jsoneditor --save
+npm install ng-jsoneditor --save
+
+```
+
 ## Explorador
 
 ```
